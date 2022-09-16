@@ -20,14 +20,14 @@ pipeline{
 				}
 				stage('user-check'){
 					steps{
-						echo 'cat/etc/passwd'
+						echo  'cat/etc/passwd'
 					}
 				}
 			}
 		}
 		stage('version-check'){
 			steps{
-				echo "end of parallel job"
+				echo "end of parallel jobs"
 			}
 		}
 		stage('web-fix'){
