@@ -20,7 +20,7 @@ pipeline{
 				}
 				stage('user-check'){
 					steps{
-						echo  'cat/etc/passwd'
+						sh  'cat /etc/passwd'
 					}
 				}
 			}
