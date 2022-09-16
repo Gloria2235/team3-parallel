@@ -1,5 +1,9 @@
 pipeline{
-	agent any 
+	agent {
+		label {
+		 label 'slave1'
+		}
+	} 
 	stages{
 		stage('git-clone'){
 			steps{
@@ -26,6 +30,11 @@ pipeline{
 			}
 		}
 		stage('version-check'){
+			agent {
+			 label {
+			  label 'slave2'
+			 }
+			}
 			steps{
 				echo "end of parallel jobs"
 			}
